@@ -1,0 +1,33 @@
+<div class="row form-group" ng-class="{ 'form-horizontal':  !properties.labelHidden && properties.labelPosition === 'left' }">
+    <label
+            ng-if="!properties.labelHidden"
+            class="control-label col-xs-{{ !properties.labelHidden && properties.labelPosition === 'left' ? properties.labelWidth : 12 }}"
+            ng-bind-html="properties.label | uiTranslate">
+    </label>
+
+    <div ng-if="properties.inline" class="col-xs-{{ 12 - (!properties.labelHidden && properties.labelPosition === 'left' ? properties.labelWidth : 0) }}">
+        <label class="checkbox-inline" ng-repeat="choice in properties.availableValues track by $index">
+            <input
+                    type="checkbox"
+                    name="{{ctrl.name}}"
+                    ng-model="ctrl.selectedItems[$index]"
+                    ng-change="ctrl.updateValues()"
+                    ng-disabled="properties.disabled">
+            {{ (ctrl.getLabel(choice) || choice) | uiTranslate }}
+        </label>
+    </div>
+
+    <div ng-if="!properties.inline" class="col-xs-{{ 12 - (!properties.labelHidden && properties.labelPosition === 'left' ? properties.labelWidth : 0) }}">
+        <div ng-if="!properties.inline" class="checkbox checklist-margin" ng-repeat="choice in properties.availableValues track by $index">
+            <label>
+                <input
+                        type="checkbox"
+                        name="{{ctrl.name}}"
+                        ng-model="ctrl.selectedItems[$index]"
+                        ng-change="ctrl.updateValues()"
+                        ng-disabled="properties.disabled">
+                {{ (ctrl.getLabel(choice) || choice) | uiTranslate }}
+            </label>
+        </div>
+    </div>
+</div>
