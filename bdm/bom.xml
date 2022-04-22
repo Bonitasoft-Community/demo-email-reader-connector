@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<businessObjectModel xmlns="http://documentation.bonitasoft.com/bdm-xml-schema/1.0" modelVersion="1.0" productVersion="7.14.0">
+    <businessObjects>
+        <businessObject qualifiedName="com.company.email.Email">
+            <fields>
+                <field type="LONG" length="255" name="messageNumber" nullable="true" collection="false"/>
+                <field type="TEXT" length="255" name="subject" nullable="true" collection="false"/>
+                <field type="OFFSETDATETIME" length="255" name="sendDate" nullable="true" collection="false">
+                    <description>
+</description>
+                </field>
+                <field type="OFFSETDATETIME" length="255" name="receivedDate" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="email" nullable="true" collection="false">
+                    <description>email address</description>
+                </field>
+                <field type="STRING" length="255" name="name" nullable="true" collection="false">
+                    <description>full name </description>
+                </field>
+                <field type="TEXT" length="255" name="body" nullable="true" collection="false"/>
+                <field type="TEXT" length="255" name="plainContent" nullable="true" collection="false"/>
+                <field type="TEXT" length="255" name="htmlContent" nullable="true" collection="false"/>
+                <field type="TEXT" length="255" name="htmlContentSanitized" nullable="true" collection="false">
+                    <description>based on OWASP sanitizer</description>
+                </field>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.email.Review">
+            <fields>
+                <field type="BOOLEAN" length="255" name="reviewOk" nullable="true" collection="false"/>
+                <field type="TEXT" length="255" name="comment" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.email.SupportCase">
+            <fields>
+                <field type="LONG" length="255" name="caseId" nullable="true" collection="false"/>
+                <field type="LONG" length="255" name="taskId" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+    </businessObjects>
+</businessObjectModel>

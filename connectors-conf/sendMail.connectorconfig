@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<connectorconfiguration:ConnectorConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:connectorconfiguration="http://wwww.bonitasoft.org/model/connector/configuration" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:parameter="http://www.bonitasoft.org/ns/studio/parameter" xmlns:process="http://www.bonitasoft.org/ns/studio/process" definitionId="email" version="1.2.0" name="sendMail" modelVersion="7.12.0-004">
+  <parameters key="smtpHost">
+    <expression xsi:type="expression:Expression" name="smtpHost" content="smtpHost" type="TYPE_PARAMETER" returnTypeFixed="true">
+      <referencedElements xsi:type="parameter:Parameter" name="smtpHost" typeClassname="java.lang.String"/>
+    </expression>
+  </parameters>
+  <parameters key="smtpPort">
+    <expression xsi:type="expression:Expression" name="smtpPort" content="smtpPort" type="TYPE_PARAMETER" returnType="java.lang.Integer" returnTypeFixed="true">
+      <referencedElements xsi:type="parameter:Parameter" name="smtpPort" typeClassname="java.lang.Integer"/>
+    </expression>
+  </parameters>
+  <parameters key="sslSupport">
+    <expression xsi:type="expression:Expression" name="smtpSSL" content="smtpSSL" type="TYPE_PARAMETER" returnType="java.lang.Boolean" returnTypeFixed="true">
+      <referencedElements xsi:type="parameter:Parameter" name="smtpSSL" typeClassname="java.lang.Boolean"/>
+    </expression>
+  </parameters>
+  <parameters key="starttlsSupport">
+    <expression xsi:type="expression:Expression" name="smtpTLS" content="smtpTLS" type="TYPE_PARAMETER" returnType="java.lang.Boolean" returnTypeFixed="true">
+      <referencedElements xsi:type="parameter:Parameter" name="smtpTLS" typeClassname="java.lang.Boolean"/>
+    </expression>
+  </parameters>
+  <parameters key="userName">
+    <expression xsi:type="expression:Expression" name="smtpUsername" content="smtpUsername" interpreter="GROOVY" type="TYPE_PARAMETER" returnTypeFixed="true">
+      <referencedElements xsi:type="parameter:Parameter" name="smtpUsername" typeClassname="java.lang.String"/>
+    </expression>
+  </parameters>
+  <parameters key="password">
+    <expression xsi:type="expression:Expression" name="smtpPassword" content="smtpPassword" type="TYPE_PARAMETER" returnTypeFixed="true">
+      <referencedElements xsi:type="parameter:Parameter" name="smtpPassword" typeClassname="java.lang.String"/>
+    </expression>
+  </parameters>
+  <parameters key="from">
+    <expression xsi:type="expression:Expression" name="walter.bates@acme.com" content="walter.bates@acme.com" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="returnPath">
+    <expression xsi:type="expression:Expression" content="" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="to">
+    <expression xsi:type="expression:Expression" name="helen.kelly@acme.com" content="helen.kelly@acme.com" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="bcc">
+    <expression xsi:type="expression:Expression" content="" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="cc">
+    <expression xsi:type="expression:Expression" content="" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="subject">
+    <expression xsi:type="expression:Expression" name="subject()" content="&quot;document request [${activityInstanceId}]&quot; as String" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
+      <referencedElements xsi:type="expression:Expression" name="activityInstanceId" content="activityInstanceId" type="TYPE_ENGINE_CONSTANT" returnType="java.lang.Long"/>
+    </expression>
+  </parameters>
+  <parameters key="html">
+    <expression xsi:type="expression:Expression" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="message">
+    <expression xsi:type="expression:Expression" name="&lt;pattern-expression>" content="&lt;html>&#xA;&lt;body>&#xA;&#xA;&lt;P  style=&quot;margin: 4;&quot;align = &quot;left&quot;>body&lt;/P>&#xA;&lt;br>&#xA;&lt;br>&#xA;&lt;P  style=&quot;margin: 4;&quot;align = &quot;left&quot;>--&lt;/P>&#xA;&lt;/body>&lt;/html>&#xA;" type="TYPE_PATTERN" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="headers">
+    <expression xsi:type="expression:TableExpression"/>
+  </parameters>
+  <parameters key="charset">
+    <expression xsi:type="expression:Expression" name="UTF-8" content="UTF-8" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="replyTo">
+    <expression xsi:type="expression:Expression" content="" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="attachments">
+    <expression xsi:type="expression:ListExpression">
+      <expressions name="attachement" content="attachement" type="TYPE_DOCUMENT" returnType="org.bonitasoft.engine.bpm.document.Document">
+        <referencedElements xsi:type="process:Document" name="attachement"/>
+      </expressions>
+    </expression>
+  </parameters>
+  <parameters key="trustCertificate">
+    <expression xsi:type="expression:Expression" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+  </parameters>
+</connectorconfiguration:ConnectorConfiguration>

@@ -1,0 +1,27 @@
+version: "3.2"
+
+services:
+  greenmail:
+    image: greenmail/standalone:1.6.8
+    ports:
+      - 2525:3025
+      - 3110:3110
+      - 3143:3143 
+      - 3465:3465
+      - 3993:3993
+      - 3995:3995 
+    restart: always
+
+  roundcude:
+    image: roundcube/roundcubemail:latest
+    environment:
+      - ROUNDCUBEMAIL_SMTP_SERVER=greenmail
+      - ROUNDCUBEMAIL_SMTP_PORT=3025  
+      - ROUNDCUBEMAIL_DEFAULT_HOST=greenmail
+      - ROUNDCUBEMAIL_DEFAULT_PORT=3143 
+    ports:
+      - 8088:80
+    depends_on:
+      - greenmail
+    restart: always
+

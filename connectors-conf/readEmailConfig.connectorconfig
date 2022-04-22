@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<connectorconfiguration:ConnectorConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:connectorconfiguration="http://wwww.bonitasoft.org/model/connector/configuration" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:parameter="http://www.bonitasoft.org/ns/studio/parameter" definitionId="bonita-connector-email-reader" version="1.0" name="readEmailConfig" modelVersion="7.12.0-004">
+  <parameters key="emailHost">
+    <expression xsi:type="expression:Expression" name="imapHost" content="imapHost" type="TYPE_PARAMETER" returnTypeFixed="true">
+      <referencedElements xsi:type="parameter:Parameter" name="imapHost" typeClassname="java.lang.String"/>
+    </expression>
+  </parameters>
+  <parameters key="emailPort">
+    <expression xsi:type="expression:Expression" name="imapPort" content="imapPort" type="TYPE_PARAMETER" returnType="java.lang.Integer" returnTypeFixed="true">
+      <referencedElements xsi:type="parameter:Parameter" name="imapPort" typeClassname="java.lang.Integer"/>
+    </expression>
+  </parameters>
+  <parameters key="emailUsername">
+    <expression xsi:type="expression:Expression" name="imapUsername" content="imapUsername" type="TYPE_PARAMETER" returnTypeFixed="true">
+      <referencedElements xsi:type="parameter:Parameter" name="imapUsername" typeClassname="java.lang.String"/>
+    </expression>
+  </parameters>
+  <parameters key="emailPassword">
+    <expression xsi:type="expression:Expression" name="imapPassword" content="imapPassword" type="TYPE_PARAMETER" returnTypeFixed="true">
+      <referencedElements xsi:type="parameter:Parameter" name="imapPassword" typeClassname="java.lang.String"/>
+    </expression>
+  </parameters>
+  <parameters key="emailProtocol">
+    <expression xsi:type="expression:Expression" name="imapProtocol" content="imapProtocol" type="TYPE_PARAMETER" returnTypeFixed="true">
+      <referencedElements xsi:type="parameter:Parameter" name="imapProtocol" typeClassname="java.lang.String"/>
+    </expression>
+  </parameters>
+  <parameters key="emailSSL">
+    <expression xsi:type="expression:Expression" name="imapSSL" content="imapSSL" type="TYPE_PARAMETER" returnType="java.lang.Boolean" returnTypeFixed="true">
+      <referencedElements xsi:type="parameter:Parameter" name="imapSSL" typeClassname="java.lang.Boolean"/>
+    </expression>
+  </parameters>
+  <parameters key="emailFolderName">
+    <expression xsi:type="expression:Expression" name="imapFolderName" content="imapFolderName" type="TYPE_PARAMETER" returnTypeFixed="true">
+      <referencedElements xsi:type="parameter:Parameter" name="imapFolderName" typeClassname="java.lang.String" description="Inbos or sub folder"/>
+    </expression>
+  </parameters>
+  <parameters key="emailBatchSize">
+    <expression xsi:type="expression:Expression" name="batchSize" content="batchSize" type="TYPE_PARAMETER" returnType="java.lang.Integer" returnTypeFixed="true">
+      <referencedElements xsi:type="parameter:Parameter" name="batchSize" typeClassname="java.lang.Integer" description="number of unread mails to fetch"/>
+    </expression>
+  </parameters>
+</connectorconfiguration:ConnectorConfiguration>
