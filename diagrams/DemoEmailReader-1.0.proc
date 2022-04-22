@@ -637,12 +637,62 @@
             </roles>
             <users xmi:type="actormapping:Users" xmi:id="_54v_FYfuEeueH9jNzOMSBA"/>
           </actorMapping>
+          <actorMapping xmi:type="actormapping:ActorMapping" xmi:id="_ZpmXEMIbEeyQydlc37essQ" name="Customer">
+            <groups xmi:type="actormapping:Groups" xmi:id="_ZpmXEcIbEeyQydlc37essQ"/>
+            <memberships xmi:type="actormapping:Membership" xmi:id="_ZpmXEsIbEeyQydlc37essQ"/>
+            <roles xmi:type="actormapping:Roles" xmi:id="_ZpmXE8IbEeyQydlc37essQ"/>
+            <users xmi:type="actormapping:Users" xmi:id="_ZpmXFMIbEeyQydlc37essQ"/>
+          </actorMapping>
+          <actorMapping xmi:type="actormapping:ActorMapping" xmi:id="_ZpmXFcIbEeyQydlc37essQ" name="customer care">
+            <groups xmi:type="actormapping:Groups" xmi:id="_ZpmXFsIbEeyQydlc37essQ"/>
+            <memberships xmi:type="actormapping:Membership" xmi:id="_ZpmXF8IbEeyQydlc37essQ"/>
+            <roles xmi:type="actormapping:Roles" xmi:id="_ZpmXGMIbEeyQydlc37essQ"/>
+            <users xmi:type="actormapping:Users" xmi:id="_ZpmXGcIbEeyQydlc37essQ"/>
+          </actorMapping>
+          <actorMapping xmi:type="actormapping:ActorMapping" xmi:id="_ZpmXGsIbEeyQydlc37essQ" name="emailBot">
+            <groups xmi:type="actormapping:Groups" xmi:id="_ZpmXG8IbEeyQydlc37essQ"/>
+            <memberships xmi:type="actormapping:Membership" xmi:id="_ZpmXHMIbEeyQydlc37essQ"/>
+            <roles xmi:type="actormapping:Roles" xmi:id="_ZpmXHcIbEeyQydlc37essQ"/>
+            <users xmi:type="actormapping:Users" xmi:id="_ZpmXHsIbEeyQydlc37essQ"/>
+          </actorMapping>
         </actorMappings>
         <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_aGEgwA1REeuXps_VWYnvcw" type="CONNECTOR" definitionId="scripting-groovy-script" definitionVersion="1.0.1" implementationId="scripting-groovy-script-impl" implementationVersion="1.1.4"/>
-        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_KiyUsQ0zEeuQpYQrcxAibA" id="ACTOR_FILTER"/>
+        <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_ZpAhMMIbEeyQydlc37essQ" type="CONNECTOR" definitionId="email" definitionVersion="1.2.0" implementationId="email-impl" implementationVersion="1.3.0"/>
+        <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_ZpSOAMIbEeyQydlc37essQ" type="CONNECTOR" definitionId="bonita-connector-email-reader" definitionVersion="1.0" implementationId="bonita-connector-email-reader-impl" implementationVersion="1.5"/>
+        <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_ZpcmEMIbEeyQydlc37essQ" type="ACTOR_FILTER" definitionId="bonita-actorfilter-same-task-user" definitionVersion="1.0.0" implementationId="bonita-actorfilter-same-task-user-impl" implementationVersion="1.0.0"/>
+        <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_ZpfCUcIbEeyQydlc37essQ" type="ACTOR_FILTER" definitionId="bonita-actorfilter-single-user" definitionVersion="1.0.0" implementationId="bonita-actorfilter-single-user-impl" implementationVersion="1.0.0"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_KiyUsQ0zEeuQpYQrcxAibA" id="ACTOR_FILTER">
+          <children xmi:type="configuration:FragmentContainer" xmi:id="_ZpebQMIbEeyQydlc37essQ" id="bonita-actorfilter-same-task-user-impl-1.0.0">
+            <fragments xmi:type="configuration:Fragment" xmi:id="_ZpfCUMIbEeyQydlc37essQ" key="bonita-actorfilter-same-task-user-impl -- 1.0.0" value="bonita-actorfilter-same-task-user-1.0.0.jar" type="ACTOR_FILTER"/>
+          </children>
+          <children xmi:type="configuration:FragmentContainer" xmi:id="_ZpgQcMIbEeyQydlc37essQ" id="bonita-actorfilter-single-user-impl-1.0.0">
+            <fragments xmi:type="configuration:Fragment" xmi:id="_Zpg3gMIbEeyQydlc37essQ" key="bonita-actorfilter-single-user-impl -- 1.0.0" value="bonita-actorfilter-single-user-1.0.0.jar" type="ACTOR_FILTER"/>
+          </children>
+        </processDependencies>
         <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_KiyUsg0zEeuQpYQrcxAibA" id="CONNECTOR">
           <children xmi:type="configuration:FragmentContainer" xmi:id="_GZnu0L_kEeyzssQkb45JaQ" id="scripting-groovy-script-impl-1.1.4">
             <fragments xmi:type="configuration:Fragment" xmi:id="_GZyG4L_kEeyzssQkb45JaQ" key="scripting-groovy-script-impl -- 1.1.4" value="bonita-connector-groovy-1.1.4.jar" type="CONNECTOR"/>
+          </children>
+          <children xmi:type="configuration:FragmentContainer" xmi:id="_ZpK5QMIbEeyQydlc37essQ" id="email-impl-1.3.0">
+            <fragments xmi:type="configuration:Fragment" xmi:id="_ZpN8kMIbEeyQydlc37essQ" key="email-impl -- 1.3.0" value="bonita-connector-email-1.3.0.jar" type="CONNECTOR"/>
+            <fragments xmi:type="configuration:Fragment" xmi:id="_ZpN8kcIbEeyQydlc37essQ" key="email-impl -- 1.3.0" value="javax.mail-1.6.2.jar" type="CONNECTOR"/>
+            <fragments xmi:type="configuration:Fragment" xmi:id="_ZpN8ksIbEeyQydlc37essQ" key="email-impl -- 1.3.0" value="javax.mail-api-1.6.2.jar" type="CONNECTOR"/>
+          </children>
+          <children xmi:type="configuration:FragmentContainer" xmi:id="_ZpUqQMIbEeyQydlc37essQ" id="bonita-connector-email-reader-impl-1.5">
+            <fragments xmi:type="configuration:Fragment" xmi:id="_ZpWfcMIbEeyQydlc37essQ" key="bonita-connector-email-reader-impl -- 1.5" value="bonita-connector-email-reader-1.5.jar" type="CONNECTOR"/>
+            <fragments xmi:type="configuration:Fragment" xmi:id="_ZpWfccIbEeyQydlc37essQ" key="bonita-connector-email-reader-impl -- 1.5" value="activation-1.1.jar" type="CONNECTOR"/>
+            <fragments xmi:type="configuration:Fragment" xmi:id="_ZpWfcsIbEeyQydlc37essQ" key="bonita-connector-email-reader-impl -- 1.5" value="checker-qual-3.5.0.jar" type="CONNECTOR"/>
+            <fragments xmi:type="configuration:Fragment" xmi:id="_ZpWfc8IbEeyQydlc37essQ" key="bonita-connector-email-reader-impl -- 1.5" value="commons-email-1.5.jar" type="CONNECTOR"/>
+            <fragments xmi:type="configuration:Fragment" xmi:id="_ZpWfdMIbEeyQydlc37essQ" key="bonita-connector-email-reader-impl -- 1.5" value="error_prone_annotations-2.3.4.jar" type="CONNECTOR"/>
+            <fragments xmi:type="configuration:Fragment" xmi:id="_ZpWfdcIbEeyQydlc37essQ" key="bonita-connector-email-reader-impl -- 1.5" value="failureaccess-1.0.1.jar" type="CONNECTOR"/>
+            <fragments xmi:type="configuration:Fragment" xmi:id="_ZpXGgMIbEeyQydlc37essQ" key="bonita-connector-email-reader-impl -- 1.5" value="guava-30.1-jre.jar" type="CONNECTOR"/>
+            <fragments xmi:type="configuration:Fragment" xmi:id="_ZpXGgcIbEeyQydlc37essQ" key="bonita-connector-email-reader-impl -- 1.5" value="j2objc-annotations-1.3.jar" type="CONNECTOR"/>
+            <fragments xmi:type="configuration:Fragment" xmi:id="_ZpXGgsIbEeyQydlc37essQ" key="bonita-connector-email-reader-impl -- 1.5" value="jakarta.activation-1.2.2.jar" type="CONNECTOR"/>
+            <fragments xmi:type="configuration:Fragment" xmi:id="_ZpXGg8IbEeyQydlc37essQ" key="bonita-connector-email-reader-impl -- 1.5" value="jakarta.mail-1.6.3.jar" type="CONNECTOR"/>
+            <fragments xmi:type="configuration:Fragment" xmi:id="_ZpXGhMIbEeyQydlc37essQ" key="bonita-connector-email-reader-impl -- 1.5" value="javax.mail-1.5.6.jar" type="CONNECTOR"/>
+            <fragments xmi:type="configuration:Fragment" xmi:id="_ZpXGhcIbEeyQydlc37essQ" key="bonita-connector-email-reader-impl -- 1.5" value="jsr305-3.0.2.jar" type="CONNECTOR"/>
+            <fragments xmi:type="configuration:Fragment" xmi:id="_ZpXGhsIbEeyQydlc37essQ" key="bonita-connector-email-reader-impl -- 1.5" value="listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar" type="CONNECTOR"/>
+            <fragments xmi:type="configuration:Fragment" xmi:id="_ZpXGh8IbEeyQydlc37essQ" key="bonita-connector-email-reader-impl -- 1.5" value="owasp-java-html-sanitizer-20211018.2.jar" type="CONNECTOR"/>
           </children>
         </processDependencies>
         <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_KiyUsw0zEeuQpYQrcxAibA" id="GROOVY_SCRIPT"/>
@@ -664,6 +714,7 @@
         <parameters xmi:type="parameter:Parameter" xmi:id="_joYDgMFOEeynqNpjYnOxGQ" name="imapSSL" value="imapSSL" typeClassname="java.lang.Boolean"/>
         <parameters xmi:type="parameter:Parameter" xmi:id="_k26TMcFOEeynqNpjYnOxGQ" name="imapFolderName" value="imapFolderName" typeClassname="java.lang.String"/>
         <parameters xmi:type="parameter:Parameter" xmi:id="_mZVIMMFOEeynqNpjYnOxGQ" name="batchSize" value="batchSize" typeClassname="java.lang.Integer"/>
+        <parameters xmi:type="parameter:Parameter" xmi:id="_ZpmXH8IbEeyQydlc37essQ" name="smtpPort" typeClassname="java.lang.Integer"/>
       </configurations>
       <configurations xmi:type="configuration:Configuration" xmi:id="_I4zcIL_mEeyzssQkb45JaQ" name="Developpement" version="7.12.0-004" username="walter.bates" password="bpm">
         <actorMappings xmi:type="actormapping:ActorMappingsType" xmi:id="_I4zcOr_mEeyzssQkb45JaQ">
@@ -952,12 +1003,8 @@
           </actorMapping>
         </actorMappings>
         <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_pKdNIQ0pEeuQpYQrcxAibA" type="CONNECTOR" definitionId="bonita-connector-email-reader" definitionVersion="1.0" implementationId="bonita-connector-email-reader-impl" implementationVersion="1.5"/>
-        <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_jd8rYA0rEeuQpYQrcxAibA" type="CONNECTOR" definitionId="scripting-groovy-script" definitionVersion="1.0.1" implementationId="scripting-groovy-script-impl" implementationVersion="1.1.4"/>
         <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_pKdNIg0pEeuQpYQrcxAibA" id="ACTOR_FILTER"/>
         <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_pKdNIw0pEeuQpYQrcxAibA" id="CONNECTOR">
-          <children xmi:type="configuration:FragmentContainer" xmi:id="_GbjogL_kEeyzssQkb45JaQ" id="scripting-groovy-script-impl-1.1.4">
-            <fragments xmi:type="configuration:Fragment" xmi:id="_GbrkUL_kEeyzssQkb45JaQ" key="scripting-groovy-script-impl -- 1.1.4" value="bonita-connector-groovy-1.1.4.jar" type="CONNECTOR"/>
-          </children>
           <children xmi:type="configuration:FragmentContainer" xmi:id="_Bu5HQL_zEeyGo-oMXyjQSA" id="bonita-connector-email-reader-impl-1.5">
             <fragments xmi:type="configuration:Fragment" xmi:id="_Bu5HQb_zEeyGo-oMXyjQSA" key="bonita-connector-email-reader-impl -- 1.5" value="bonita-connector-email-reader-1.5.jar" type="CONNECTOR"/>
             <fragments xmi:type="configuration:Fragment" xmi:id="_Bu5HQr_zEeyGo-oMXyjQSA" key="bonita-connector-email-reader-impl -- 1.5" value="activation-1.1.jar" type="CONNECTOR"/>

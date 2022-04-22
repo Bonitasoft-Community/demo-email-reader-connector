@@ -1,17 +1,18 @@
 = GreenMail and RoundCube
 
-Email sand box. Check their https://greenmail-mail-test.github.io/greenmail/#[website] 
+Email sand box. Check their https://greenmail-mail-test.github.io/greenmail/#[website]. Round cube is a webmail client. 
 
 
-.start-greenmail.sh
-[source,shell]
+== Run
+
+Run both Round cube and green mail using docker compose
+
+
+.docker-compose.yml
+[source,yaml]
 ----
-include::start-greenmail.sh[]
+include::docker-compose.yml[]
 ----
-
-== GreenMail and round cube
-
-Round cube is a webmail client. Run both Round cube and green mail using docker compose
 
 .start.sh
 [source,shell]
@@ -26,11 +27,6 @@ include::stop.sh[]
 ----
 
 
-.docker-compose.yml
-[source,yaml]
-----
-include::docker-compose.yml[]
-----
 
 
 UI available on http://localhost:8088[]

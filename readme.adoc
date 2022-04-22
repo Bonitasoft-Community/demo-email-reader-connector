@@ -1,0 +1,82 @@
+= Email reader connector demo project
+:toc:
+
+This project demonstrate how to start a process with an incoming email, or just
+execute a pending task based on single "reply"
+
+
+== Demo setup
+
+=== Maven settings
+
+Add a Maven repository https://maven.pkg.github.com/bonitasoft-presales/* server credential is
+password based, using your github account name et a personnal access token (PAT) that includes
+read package access
+
+=== Server log configuration
+
+NOTE: Local Studio runtime can be configured to display connector logs:
+
+.server/conf/log4j2-loggers.xml
+[source,xml]
+----
+<?xml version="1.0" encoding="UTF-8"?><Configuration monitorInterval="10" status="info">
+  <Loggers>
+    <Logger level="INFO" name="org.bonitasoft"/>
+    <Logger level="INFO" name="com.arjuna"/>
+    <Logger level="INFO" name="org.jboss.narayana.tomcat.jta"/>
+    <Logger level="INFO" name="org.bonitasoft.platform"/>
+    <Logger level="INFO" name="org.bonitasoft.engine.EngineInitializer"/>
+    <Logger level="INFO" name="BONITA_WORK_AUDIT.EXECUTION"/>
+    <Logger level="WARN" name="org.hibernate"/>
+    <Logger level="ERROR" name="org.hibernate.orm.cache"/>
+    <Logger level="WARN" name="org.hibernate.SQL_SLOW"/>
+    <Logger level="WARN" name="net.sf.ehcache"/>
+    <Logger level="ERROR" name="org.hibernate.type.TypeFactory"/>
+    <Logger level="WARN" name="org.springframework"/>
+    <Logger level="WARN" name="org.bonitasoft.engine.service.impl.BonitaSpringContext"/>
+    <Logger level="WARN" name="org.tuckey"/>
+    <Logger level="INFO" name="com.bonitasoft"/>
+    <Logger level="INFO" name="com.bonitasoft.engine.monitoring.LoggingMeterRegistry"/>
+
+    <Logger level="DEBUG" name="com.bonitasoft.connectors"/> <!--1-->
+  </Loggers>
+</Configuration>
+----
+<1> add dedicated log level for connector package
+
+=== Local mail server and web UI
+
+NOTE: We use Docker compose to setup the mail server
+
+include::infrastructure/greenMail/readme.adoc[leveloffset=3]
+
+== Run the demo
+
+1. Open a webmail UI connected as "Walter Bates" (walter.bates@amce.com), and send an HTML
+email with attachments
+1. Open Bonita user portal, and start process All unread e-mails
+1. Wait a review task, don’t check Case information is completed and add a comment
+1. In the web mail, wait for a new mail, and just reply, and add a new attachment
+1. Wait around 1 minute until mail is read, and check task has been executed, with new attachment
+from the email
+
+== Resources
+
+[options="header",cols="1,1"]
+|===
+|Resource   |Repository   
+//-------------
+|Connector repository   |https://github.com/bonitasoft-presales/connector-email-reader[connector-email-reader]   
+|This project   |https://github.com/Bonitasoft-Community/demo-email-reader-connector[demo-email-reader-connector]   
+|===
+
+
+
+== Licence
+
+[source,text]
+----
+include::LICENSE[]
+----
+

@@ -5,7 +5,7 @@
   <groupId>com.bonitasoft.examples</groupId>
   <artifactId>demo-email-connectors</artifactId>
   <version>1.0.2-SNAPSHOT</version>
-  <name>demo-email-connectors</name>
+  <name>demo-email-reader-connector</name>
   <properties>
     <bonita.runtime.version>7.14.0</bonita.runtime.version>
     <maven-install-plugin.version>3.0.0-M1</maven-install-plugin.version>
