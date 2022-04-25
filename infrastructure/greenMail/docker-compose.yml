@@ -3,6 +3,7 @@ version: "3.2"
 services:
   greenmail:
     image: greenmail/standalone:1.6.8
+    hostname: greenmail
     ports:
       - 2525:3025
       - 3110:3110

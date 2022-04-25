@@ -26,9 +26,6 @@ include::start.sh[]
 include::stop.sh[]
 ----
 
-
-
-
 UI available on http://localhost:8088[]
 use any valid email as username to login
 
