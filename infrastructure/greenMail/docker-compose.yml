@@ -12,7 +12,7 @@ services:
       - 3995:3995 
     restart: always
 
-  roundcude:
+  roundcube:
     image: roundcube/roundcubemail:latest
     environment:
       - ROUNDCUBEMAIL_SMTP_SERVER=greenmail
