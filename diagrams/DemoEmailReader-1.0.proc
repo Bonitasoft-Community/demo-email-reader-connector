@@ -424,57 +424,57 @@
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_zR0SQsC5EeynqNpjYnOxGQ" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_zR0SQcC5EeynqNpjYnOxGQ" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_zR0SQ8C5EeynqNpjYnOxGQ" name="" content="" returnTypeFixed="true"/>
-          <connectors xmi:type="process:Connector" xmi:id="_BlLgZMFNEeynqNpjYnOxGQ" name="read" definitionId="bonita-connector-email-reader" event="ON_ENTER" definitionVersion="1.0">
-            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_BlLgZcFNEeynqNpjYnOxGQ" definitionId="bonita-connector-email-reader" version="1.0" modelVersion="7.11.1-001">
-              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_BlLgZsFNEeynqNpjYnOxGQ" key="emailHost">
-                <expression xmi:type="expression:Expression" xmi:id="_BlLgZ8FNEeynqNpjYnOxGQ" name="imapHost" content="imapHost" type="TYPE_PARAMETER" returnTypeFixed="true">
-                  <referencedElements xmi:type="parameter:Parameter" xmi:id="_mlKkwMFOEeynqNpjYnOxGQ" name="imapHost" typeClassname="java.lang.String"/>
+          <connectors xmi:type="process:Connector" xmi:id="_lcnIINEvEeySJ9acP6cdRQ" name="read email" definitionId="connector-email-reader" event="ON_ENTER" definitionVersion="1.0">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_lcnIIdEvEeySJ9acP6cdRQ" definitionId="connector-email-reader" version="1.0" modelVersion="7.12.0-004">
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_lcnIItEvEeySJ9acP6cdRQ" key="emailProtocol">
+                <expression xmi:type="expression:Expression" xmi:id="_lcnII9EvEeySJ9acP6cdRQ" name="imapProtocol" content="imapProtocol" type="TYPE_PARAMETER" returnTypeFixed="true">
+                  <referencedElements xmi:type="parameter:Parameter" xmi:id="_lcnIJNEvEeySJ9acP6cdRQ" name="imapProtocol" typeClassname="java.lang.String"/>
                 </expression>
               </parameters>
-              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_BlLgacFNEeynqNpjYnOxGQ" key="emailPort">
-                <expression xmi:type="expression:Expression" xmi:id="_BlLgasFNEeynqNpjYnOxGQ" name="imapPort" content="imapPort" type="TYPE_PARAMETER" returnType="java.lang.Integer" returnTypeFixed="true">
-                  <referencedElements xmi:type="parameter:Parameter" xmi:id="_mlKkwcFOEeynqNpjYnOxGQ" name="imapPort" typeClassname="java.lang.Integer"/>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_lcnIJdEvEeySJ9acP6cdRQ" key="emailHost">
+                <expression xmi:type="expression:Expression" xmi:id="_lcnIJtEvEeySJ9acP6cdRQ" name="imapHost" content="imapHost" type="TYPE_PARAMETER" returnTypeFixed="true">
+                  <referencedElements xmi:type="parameter:Parameter" xmi:id="_lcnIJ9EvEeySJ9acP6cdRQ" name="imapHost" typeClassname="java.lang.String"/>
                 </expression>
               </parameters>
-              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_BlLgbMFNEeynqNpjYnOxGQ" key="emailUsername">
-                <expression xmi:type="expression:Expression" xmi:id="_BlLgbcFNEeynqNpjYnOxGQ" name="emailUsername()" content="&quot;support-${waitForEmailTaskId}@acme.com&quot;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
-                  <referencedElements xmi:type="process:Data" xmi:id="_keqAsMFNEeynqNpjYnOxGQ" name="waitForEmailTaskId" dataType="_flJKzw0nEeuQpYQrcxAibA"/>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_lcnIKNEvEeySJ9acP6cdRQ" key="emailPort">
+                <expression xmi:type="expression:Expression" xmi:id="_lcnIKdEvEeySJ9acP6cdRQ" name="imapPort" content="imapPort" type="TYPE_PARAMETER" returnType="java.lang.Integer" returnTypeFixed="true">
+                  <referencedElements xmi:type="parameter:Parameter" xmi:id="_lcnIKtEvEeySJ9acP6cdRQ" name="imapPort" typeClassname="java.lang.Integer"/>
                 </expression>
               </parameters>
-              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_BlLgb8FNEeynqNpjYnOxGQ" key="emailPassword">
-                <expression xmi:type="expression:Expression" xmi:id="_BlLgcMFNEeynqNpjYnOxGQ" name="imapPassword" content="imapPassword" type="TYPE_PARAMETER" returnTypeFixed="true">
-                  <referencedElements xmi:type="parameter:Parameter" xmi:id="_mlLL0MFOEeynqNpjYnOxGQ" name="imapPassword" typeClassname="java.lang.String"/>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_lcnIK9EvEeySJ9acP6cdRQ" key="emailUsername">
+                <expression xmi:type="expression:Expression" xmi:id="_lcnILNEvEeySJ9acP6cdRQ" name="emailUsername()" content="&quot;support-${waitForEmailTaskId}@acme.com&quot; " interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:Data" xmi:id="_91tSkNEyEeySJ9acP6cdRQ" name="waitForEmailTaskId" dataType="_flJKzw0nEeuQpYQrcxAibA"/>
                 </expression>
               </parameters>
-              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_BlLgcsFNEeynqNpjYnOxGQ" key="emailProtocol">
-                <expression xmi:type="expression:Expression" xmi:id="_BlLgc8FNEeynqNpjYnOxGQ" name="imapProtocol" content="imapProtocol" type="TYPE_PARAMETER" returnTypeFixed="true">
-                  <referencedElements xmi:type="parameter:Parameter" xmi:id="_mlLL0cFOEeynqNpjYnOxGQ" name="imapProtocol" typeClassname="java.lang.String"/>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_lcnILtEvEeySJ9acP6cdRQ" key="emailPassword">
+                <expression xmi:type="expression:Expression" xmi:id="_lcnIL9EvEeySJ9acP6cdRQ" name="imapPassword" content="imapPassword" type="TYPE_PARAMETER" returnTypeFixed="true">
+                  <referencedElements xmi:type="parameter:Parameter" xmi:id="_lcnIMNEvEeySJ9acP6cdRQ" name="imapPassword" typeClassname="java.lang.String"/>
                 </expression>
               </parameters>
-              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_BlLgdcFNEeynqNpjYnOxGQ" key="emailSSL">
-                <expression xmi:type="expression:Expression" xmi:id="_BlLgdsFNEeynqNpjYnOxGQ" name="imapSSL" content="imapSSL" type="TYPE_PARAMETER" returnType="java.lang.Boolean" returnTypeFixed="true">
-                  <referencedElements xmi:type="parameter:Parameter" xmi:id="_mlLL0sFOEeynqNpjYnOxGQ" name="imapSSL" typeClassname="java.lang.Boolean"/>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_lcnIMdEvEeySJ9acP6cdRQ" key="emailSSL">
+                <expression xmi:type="expression:Expression" xmi:id="_lcnIMtEvEeySJ9acP6cdRQ" name="imapSSL" content="imapSSL" type="TYPE_PARAMETER" returnType="java.lang.Boolean" returnTypeFixed="true">
+                  <referencedElements xmi:type="parameter:Parameter" xmi:id="_lcnIM9EvEeySJ9acP6cdRQ" name="imapSSL" typeClassname="java.lang.Boolean"/>
                 </expression>
               </parameters>
-              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_BlLgeMFNEeynqNpjYnOxGQ" key="emailFolderName">
-                <expression xmi:type="expression:Expression" xmi:id="_BlLgecFNEeynqNpjYnOxGQ" name="imapFolderName" content="imapFolderName" type="TYPE_PARAMETER" returnTypeFixed="true">
-                  <referencedElements xmi:type="parameter:Parameter" xmi:id="_mlLL08FOEeynqNpjYnOxGQ" name="imapFolderName" typeClassname="java.lang.String"/>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_lcnINNEvEeySJ9acP6cdRQ" key="emailFolderName">
+                <expression xmi:type="expression:Expression" xmi:id="_lcnINdEvEeySJ9acP6cdRQ" name="imapFolderName" content="imapFolderName" type="TYPE_PARAMETER" returnTypeFixed="true">
+                  <referencedElements xmi:type="parameter:Parameter" xmi:id="_lcnINtEvEeySJ9acP6cdRQ" name="imapFolderName" typeClassname="java.lang.String"/>
                 </expression>
               </parameters>
-              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_BlLge8FNEeynqNpjYnOxGQ" key="emailBatchSize">
-                <expression xmi:type="expression:Expression" xmi:id="_BlLgfMFNEeynqNpjYnOxGQ" name="batchSize" content="batchSize" type="TYPE_PARAMETER" returnType="java.lang.Integer" returnTypeFixed="true">
-                  <referencedElements xmi:type="parameter:Parameter" xmi:id="_mlLL1MFOEeynqNpjYnOxGQ" name="batchSize" typeClassname="java.lang.Integer"/>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_lcnIN9EvEeySJ9acP6cdRQ" key="emailBatchSize">
+                <expression xmi:type="expression:Expression" xmi:id="_lcnIONEvEeySJ9acP6cdRQ" name="batchSize" content="batchSize" type="TYPE_PARAMETER" returnType="java.lang.Integer" returnTypeFixed="true">
+                  <referencedElements xmi:type="parameter:Parameter" xmi:id="_lcnIOdEvEeySJ9acP6cdRQ" name="batchSize" typeClassname="java.lang.Integer"/>
                 </expression>
               </parameters>
             </configuration>
-            <outputs xmi:type="expression:Operation" xmi:id="_BlLgfsFNEeynqNpjYnOxGQ">
-              <leftOperand xmi:type="expression:Expression" xmi:id="_BlLgf8FNEeynqNpjYnOxGQ" name="emails" content="emails" type="TYPE_VARIABLE" returnType="java.util.List">
-                <referencedElements xmi:type="process:JavaObjectData" xmi:id="_BlLggMFNEeynqNpjYnOxGQ" name="emails" multiple="true" dataType="_flJK0g0nEeuQpYQrcxAibA" className="java.util.List"/>
+            <outputs xmi:type="expression:Operation" xmi:id="_lcnIOtEvEeySJ9acP6cdRQ">
+              <leftOperand xmi:type="expression:Expression" xmi:id="_lcnIO9EvEeySJ9acP6cdRQ" name="emails" content="emails" type="TYPE_VARIABLE" returnType="java.util.List">
+                <referencedElements xmi:type="process:JavaObjectData" xmi:id="_lcnIPNEvEeySJ9acP6cdRQ" name="emails" multiple="true" dataType="_flJK0g0nEeuQpYQrcxAibA" className="java.util.List"/>
               </leftOperand>
-              <rightOperand xmi:type="expression:Expression" xmi:id="_BlLggcFNEeynqNpjYnOxGQ" name="mails" content="mails" type="CONNECTOR_OUTPUT_TYPE" returnType="java.util.List">
-                <referencedElements xmi:type="definition:Output" xmi:id="_BlLggsFNEeynqNpjYnOxGQ" name="mails" type="java.util.List"/>
+              <rightOperand xmi:type="expression:Expression" xmi:id="_lcnIPdEvEeySJ9acP6cdRQ" name="mails" content="mails" type="CONNECTOR_OUTPUT_TYPE" returnType="java.util.List">
+                <referencedElements xmi:type="definition:Output" xmi:id="_lcnIPtEvEeySJ9acP6cdRQ" name="mails" type="java.util.List"/>
               </rightOperand>
-              <operator xmi:type="expression:Operator" xmi:id="_BlLgg8FNEeynqNpjYnOxGQ" type="ASSIGNMENT"/>
+              <operator xmi:type="expression:Operator" xmi:id="_lcnIP9EvEeySJ9acP6cdRQ" type="ASSIGNMENT"/>
             </outputs>
           </connectors>
           <operations xmi:type="expression:Operation" xmi:id="_yGSekMFOEeynqNpjYnOxGQ">
@@ -533,7 +533,7 @@
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_2MctkcFMEeynqNpjYnOxGQ" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_2MctkMFMEeynqNpjYnOxGQ" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_2MctksFMEeynqNpjYnOxGQ" name="" content="" returnTypeFixed="true"/>
-          <condition xmi:type="expression:Expression" xmi:id="_3i_NQMFNEeynqNpjYnOxGQ" name="00:00:30" content="30000L" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long"/>
+          <condition xmi:type="expression:Expression" xmi:id="_3i_NQMFNEeynqNpjYnOxGQ" name="00:00:10" content="10000L" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long"/>
         </elements>
         <elements xmi:type="process:TextAnnotation" xmi:id="_8itaUMFzEeynqNpjYnOxGQ" text="Task executed by email bot when a matching email is received"/>
       </elements>
@@ -754,8 +754,8 @@
         <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_WKnLMMC8EeynqNpjYnOxGQ" type="CONNECTOR" definitionId="email" definitionVersion="1.2.0" implementationId="email-impl" implementationVersion="1.3.0"/>
         <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_WP9lQMC8EeynqNpjYnOxGQ" type="ACTOR_FILTER" definitionId="bonita-actorfilter-same-task-user" definitionVersion="1.0.0" implementationId="bonita-actorfilter-same-task-user-impl" implementationVersion="1.0.0"/>
         <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_nKzBYMFOEeynqNpjYnOxGQ" type="CONNECTOR" definitionId="scripting-groovy-script" definitionVersion="1.0.1" implementationId="scripting-groovy-script-impl" implementationVersion="1.1.4"/>
-        <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_nLMC8MFOEeynqNpjYnOxGQ" type="CONNECTOR" definitionId="bonita-connector-email-reader" definitionVersion="1.0" implementationId="bonita-connector-email-reader-impl" implementationVersion="1.5"/>
         <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_C35g8MFXEeynqNpjYnOxGQ" type="ACTOR_FILTER" definitionId="bonita-actorfilter-single-user" definitionVersion="1.0.0" implementationId="bonita-actorfilter-single-user-impl" implementationVersion="1.0.0"/>
+        <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_unQ50NEvEeySJ9acP6cdRQ" type="CONNECTOR" definitionId="connector-email-reader" definitionVersion="1.0" implementationId="connector-email-reader-impl" implementationVersion="1.8"/>
         <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_I4zcIr_mEeyzssQkb45JaQ" id="CONNECTOR">
           <children xmi:type="configuration:FragmentContainer" xmi:id="_WNTS0MC8EeynqNpjYnOxGQ" id="email-impl-1.3.0">
             <fragments xmi:type="configuration:Fragment" xmi:id="_WNeR8MC8EeynqNpjYnOxGQ" key="email-impl -- 1.3.0" value="bonita-connector-email-1.3.0.jar" type="CONNECTOR"/>
@@ -765,21 +765,21 @@
           <children xmi:type="configuration:FragmentContainer" xmi:id="_nLEuMMFOEeynqNpjYnOxGQ" id="scripting-groovy-script-impl-1.1.4">
             <fragments xmi:type="configuration:Fragment" xmi:id="_nLLb4MFOEeynqNpjYnOxGQ" key="scripting-groovy-script-impl -- 1.1.4" value="bonita-connector-groovy-1.1.4.jar" type="CONNECTOR"/>
           </children>
-          <children xmi:type="configuration:FragmentContainer" xmi:id="_nLTXsMFOEeynqNpjYnOxGQ" id="bonita-connector-email-reader-impl-1.5">
-            <fragments xmi:type="configuration:Fragment" xmi:id="_nLbTgMFOEeynqNpjYnOxGQ" key="bonita-connector-email-reader-impl -- 1.5" value="bonita-connector-email-reader-1.5.jar" type="CONNECTOR"/>
-            <fragments xmi:type="configuration:Fragment" xmi:id="_nLbTgcFOEeynqNpjYnOxGQ" key="bonita-connector-email-reader-impl -- 1.5" value="activation-1.1.jar" type="CONNECTOR"/>
-            <fragments xmi:type="configuration:Fragment" xmi:id="_nLb6kMFOEeynqNpjYnOxGQ" key="bonita-connector-email-reader-impl -- 1.5" value="checker-qual-3.5.0.jar" type="CONNECTOR"/>
-            <fragments xmi:type="configuration:Fragment" xmi:id="_nLchoMFOEeynqNpjYnOxGQ" key="bonita-connector-email-reader-impl -- 1.5" value="commons-email-1.5.jar" type="CONNECTOR"/>
-            <fragments xmi:type="configuration:Fragment" xmi:id="_nLchocFOEeynqNpjYnOxGQ" key="bonita-connector-email-reader-impl -- 1.5" value="error_prone_annotations-2.3.4.jar" type="CONNECTOR"/>
-            <fragments xmi:type="configuration:Fragment" xmi:id="_nLdIsMFOEeynqNpjYnOxGQ" key="bonita-connector-email-reader-impl -- 1.5" value="failureaccess-1.0.1.jar" type="CONNECTOR"/>
-            <fragments xmi:type="configuration:Fragment" xmi:id="_nLdIscFOEeynqNpjYnOxGQ" key="bonita-connector-email-reader-impl -- 1.5" value="guava-30.1-jre.jar" type="CONNECTOR"/>
-            <fragments xmi:type="configuration:Fragment" xmi:id="_nLdvwMFOEeynqNpjYnOxGQ" key="bonita-connector-email-reader-impl -- 1.5" value="j2objc-annotations-1.3.jar" type="CONNECTOR"/>
-            <fragments xmi:type="configuration:Fragment" xmi:id="_nLdvwcFOEeynqNpjYnOxGQ" key="bonita-connector-email-reader-impl -- 1.5" value="jakarta.activation-1.2.2.jar" type="CONNECTOR"/>
-            <fragments xmi:type="configuration:Fragment" xmi:id="_nLe94MFOEeynqNpjYnOxGQ" key="bonita-connector-email-reader-impl -- 1.5" value="jakarta.mail-1.6.3.jar" type="CONNECTOR"/>
-            <fragments xmi:type="configuration:Fragment" xmi:id="_nLfk8MFOEeynqNpjYnOxGQ" key="bonita-connector-email-reader-impl -- 1.5" value="javax.mail-1.5.6.jar" type="CONNECTOR"/>
-            <fragments xmi:type="configuration:Fragment" xmi:id="_nLgMAMFOEeynqNpjYnOxGQ" key="bonita-connector-email-reader-impl -- 1.5" value="jsr305-3.0.2.jar" type="CONNECTOR"/>
-            <fragments xmi:type="configuration:Fragment" xmi:id="_nLgMAcFOEeynqNpjYnOxGQ" key="bonita-connector-email-reader-impl -- 1.5" value="listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar" type="CONNECTOR"/>
-            <fragments xmi:type="configuration:Fragment" xmi:id="_nLgzEMFOEeynqNpjYnOxGQ" key="bonita-connector-email-reader-impl -- 1.5" value="owasp-java-html-sanitizer-20211018.2.jar" type="CONNECTOR"/>
+          <children xmi:type="configuration:FragmentContainer" xmi:id="_unUkMNEvEeySJ9acP6cdRQ" id="connector-email-reader-impl-1.8">
+            <fragments xmi:type="configuration:Fragment" xmi:id="_unVyUNEvEeySJ9acP6cdRQ" key="connector-email-reader-impl -- 1.8" value="connector-email-reader-1.8.jar" type="CONNECTOR"/>
+            <fragments xmi:type="configuration:Fragment" xmi:id="_unWZYNEvEeySJ9acP6cdRQ" key="connector-email-reader-impl -- 1.8" value="activation-1.1.jar" type="CONNECTOR"/>
+            <fragments xmi:type="configuration:Fragment" xmi:id="_unXAcNEvEeySJ9acP6cdRQ" key="connector-email-reader-impl -- 1.8" value="checker-qual-3.5.0.jar" type="CONNECTOR"/>
+            <fragments xmi:type="configuration:Fragment" xmi:id="_unXngNEvEeySJ9acP6cdRQ" key="connector-email-reader-impl -- 1.8" value="commons-email-1.5.jar" type="CONNECTOR"/>
+            <fragments xmi:type="configuration:Fragment" xmi:id="_unYOkNEvEeySJ9acP6cdRQ" key="connector-email-reader-impl -- 1.8" value="error_prone_annotations-2.3.4.jar" type="CONNECTOR"/>
+            <fragments xmi:type="configuration:Fragment" xmi:id="_unY1oNEvEeySJ9acP6cdRQ" key="connector-email-reader-impl -- 1.8" value="failureaccess-1.0.1.jar" type="CONNECTOR"/>
+            <fragments xmi:type="configuration:Fragment" xmi:id="_unZcsNEvEeySJ9acP6cdRQ" key="connector-email-reader-impl -- 1.8" value="guava-30.1-jre.jar" type="CONNECTOR"/>
+            <fragments xmi:type="configuration:Fragment" xmi:id="_unaDwNEvEeySJ9acP6cdRQ" key="connector-email-reader-impl -- 1.8" value="j2objc-annotations-1.3.jar" type="CONNECTOR"/>
+            <fragments xmi:type="configuration:Fragment" xmi:id="_unaq0NEvEeySJ9acP6cdRQ" key="connector-email-reader-impl -- 1.8" value="jakarta.activation-1.2.2.jar" type="CONNECTOR"/>
+            <fragments xmi:type="configuration:Fragment" xmi:id="_unaq0dEvEeySJ9acP6cdRQ" key="connector-email-reader-impl -- 1.8" value="jakarta.mail-1.6.7.jar" type="CONNECTOR"/>
+            <fragments xmi:type="configuration:Fragment" xmi:id="_unb48NEvEeySJ9acP6cdRQ" key="connector-email-reader-impl -- 1.8" value="javax.mail-1.5.6.jar" type="CONNECTOR"/>
+            <fragments xmi:type="configuration:Fragment" xmi:id="_unb48dEvEeySJ9acP6cdRQ" key="connector-email-reader-impl -- 1.8" value="jsr305-3.0.2.jar" type="CONNECTOR"/>
+            <fragments xmi:type="configuration:Fragment" xmi:id="_uncgANEvEeySJ9acP6cdRQ" key="connector-email-reader-impl -- 1.8" value="listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar" type="CONNECTOR"/>
+            <fragments xmi:type="configuration:Fragment" xmi:id="_undHENEvEeySJ9acP6cdRQ" key="connector-email-reader-impl -- 1.8" value="owasp-java-html-sanitizer-20211018.2.jar" type="CONNECTOR"/>
           </children>
         </processDependencies>
         <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_I4zcJb_mEeyzssQkb45JaQ" id="GROOVY_SCRIPT"/>
@@ -876,57 +876,57 @@
         <dynamicLabel xmi:type="expression:Expression" xmi:id="_sPA1MQ0nEeuQpYQrcxAibA" name="" content="" returnTypeFixed="true"/>
         <dynamicDescription xmi:type="expression:Expression" xmi:id="_sPA1Mg0nEeuQpYQrcxAibA" name="" content="" returnTypeFixed="true"/>
         <stepSummary xmi:type="expression:Expression" xmi:id="_sPA1Mw0nEeuQpYQrcxAibA" name="" content="" returnTypeFixed="true"/>
-        <connectors xmi:type="process:Connector" xmi:id="_sPA1NA0nEeuQpYQrcxAibA" name="read" definitionId="bonita-connector-email-reader" event="ON_ENTER" definitionVersion="1.0">
-          <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_sPA1NQ0nEeuQpYQrcxAibA" definitionId="bonita-connector-email-reader" version="1.0" modelVersion="7.11.1-001">
-            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_sPA1Ng0nEeuQpYQrcxAibA" key="emailHost">
-              <expression xmi:type="expression:Expression" xmi:id="_sPA1Nw0nEeuQpYQrcxAibA" name="imapHost" content="imapHost" type="TYPE_PARAMETER" returnTypeFixed="true">
-                <referencedElements xmi:type="parameter:Parameter" xmi:id="_sPA1OA0nEeuQpYQrcxAibA" name="imapHost" typeClassname="java.lang.String"/>
+        <connectors xmi:type="process:Connector" xmi:id="_CbUvoNEvEeySJ9acP6cdRQ" name="readEmails" definitionId="connector-email-reader" event="ON_ENTER" definitionVersion="1.0">
+          <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_CbUvodEvEeySJ9acP6cdRQ" definitionId="connector-email-reader" version="1.0" modelVersion="7.12.0-004">
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_CbUvotEvEeySJ9acP6cdRQ" key="emailProtocol">
+              <expression xmi:type="expression:Expression" xmi:id="_CbUvo9EvEeySJ9acP6cdRQ" name="imapProtocol" content="imapProtocol" type="TYPE_PARAMETER" returnTypeFixed="true">
+                <referencedElements xmi:type="parameter:Parameter" xmi:id="_CbUvpNEvEeySJ9acP6cdRQ" name="imapProtocol" typeClassname="java.lang.String"/>
               </expression>
             </parameters>
-            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_sPA1OQ0nEeuQpYQrcxAibA" key="emailPort">
-              <expression xmi:type="expression:Expression" xmi:id="_sPA1Og0nEeuQpYQrcxAibA" name="imapPort" content="imapPort" type="TYPE_PARAMETER" returnType="java.lang.Integer" returnTypeFixed="true">
-                <referencedElements xmi:type="parameter:Parameter" xmi:id="_sPA1Ow0nEeuQpYQrcxAibA" name="imapPort" typeClassname="java.lang.Integer"/>
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_CbUvpdEvEeySJ9acP6cdRQ" key="emailHost">
+              <expression xmi:type="expression:Expression" xmi:id="_CbUvptEvEeySJ9acP6cdRQ" name="imapHost" content="imapHost" type="TYPE_PARAMETER" returnTypeFixed="true">
+                <referencedElements xmi:type="parameter:Parameter" xmi:id="_CbUvp9EvEeySJ9acP6cdRQ" name="imapHost" typeClassname="java.lang.String"/>
               </expression>
             </parameters>
-            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_sPA1PA0nEeuQpYQrcxAibA" key="emailUsername">
-              <expression xmi:type="expression:Expression" xmi:id="_sPA1PQ0nEeuQpYQrcxAibA" name="imapUsername" content="imapUsername" type="TYPE_PARAMETER" returnTypeFixed="true">
-                <referencedElements xmi:type="parameter:Parameter" xmi:id="_sPA1Pg0nEeuQpYQrcxAibA" name="imapUsername" typeClassname="java.lang.String"/>
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_CbUvqNEvEeySJ9acP6cdRQ" key="emailPort">
+              <expression xmi:type="expression:Expression" xmi:id="_CbUvqdEvEeySJ9acP6cdRQ" name="imapPort" content="imapPort" type="TYPE_PARAMETER" returnType="java.lang.Integer" returnTypeFixed="true">
+                <referencedElements xmi:type="parameter:Parameter" xmi:id="_CbUvqtEvEeySJ9acP6cdRQ" name="imapPort" typeClassname="java.lang.Integer"/>
               </expression>
             </parameters>
-            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_sPA1Pw0nEeuQpYQrcxAibA" key="emailPassword">
-              <expression xmi:type="expression:Expression" xmi:id="_sPA1QA0nEeuQpYQrcxAibA" name="imapPassword" content="imapPassword" type="TYPE_PARAMETER" returnTypeFixed="true">
-                <referencedElements xmi:type="parameter:Parameter" xmi:id="_sPA1QQ0nEeuQpYQrcxAibA" name="imapPassword" typeClassname="java.lang.String"/>
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_CbUvq9EvEeySJ9acP6cdRQ" key="emailUsername">
+              <expression xmi:type="expression:Expression" xmi:id="_CbUvrNEvEeySJ9acP6cdRQ" name="imapUsername" content="imapUsername" type="TYPE_PARAMETER" returnTypeFixed="true">
+                <referencedElements xmi:type="parameter:Parameter" xmi:id="_CbUvrdEvEeySJ9acP6cdRQ" name="imapUsername" typeClassname="java.lang.String"/>
               </expression>
             </parameters>
-            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_sPA1Qg0nEeuQpYQrcxAibA" key="emailProtocol">
-              <expression xmi:type="expression:Expression" xmi:id="_sPA1Qw0nEeuQpYQrcxAibA" name="imapProtocol" content="imapProtocol" type="TYPE_PARAMETER" returnTypeFixed="true">
-                <referencedElements xmi:type="parameter:Parameter" xmi:id="_sPA1RA0nEeuQpYQrcxAibA" name="imapProtocol" typeClassname="java.lang.String"/>
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_CbUvrtEvEeySJ9acP6cdRQ" key="emailPassword">
+              <expression xmi:type="expression:Expression" xmi:id="_CbUvr9EvEeySJ9acP6cdRQ" name="imapPassword" content="imapPassword" type="TYPE_PARAMETER" returnTypeFixed="true">
+                <referencedElements xmi:type="parameter:Parameter" xmi:id="_CbUvsNEvEeySJ9acP6cdRQ" name="imapPassword" typeClassname="java.lang.String"/>
               </expression>
             </parameters>
-            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_sPA1RQ0nEeuQpYQrcxAibA" key="emailSSL">
-              <expression xmi:type="expression:Expression" xmi:id="_sPA1Rg0nEeuQpYQrcxAibA" name="imapSSL" content="imapSSL" type="TYPE_PARAMETER" returnType="java.lang.Boolean" returnTypeFixed="true">
-                <referencedElements xmi:type="parameter:Parameter" xmi:id="_sPA1Rw0nEeuQpYQrcxAibA" name="imapSSL" typeClassname="java.lang.Boolean"/>
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_CbUvsdEvEeySJ9acP6cdRQ" key="emailSSL">
+              <expression xmi:type="expression:Expression" xmi:id="_CbUvstEvEeySJ9acP6cdRQ" name="imapSSL" content="imapSSL" type="TYPE_PARAMETER" returnType="java.lang.Boolean" returnTypeFixed="true">
+                <referencedElements xmi:type="parameter:Parameter" xmi:id="_CbUvs9EvEeySJ9acP6cdRQ" name="imapSSL" typeClassname="java.lang.Boolean"/>
               </expression>
             </parameters>
-            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_sPA1SA0nEeuQpYQrcxAibA" key="emailFolderName">
-              <expression xmi:type="expression:Expression" xmi:id="_sPA1SQ0nEeuQpYQrcxAibA" name="imapFolderName" content="imapFolderName" type="TYPE_PARAMETER" returnTypeFixed="true">
-                <referencedElements xmi:type="parameter:Parameter" xmi:id="_XLT6cA-vEeuxG9TwArpZGA" name="imapFolderName" typeClassname="java.lang.String" description="Inbos or sub folder"/>
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_CbUvtNEvEeySJ9acP6cdRQ" key="emailFolderName">
+              <expression xmi:type="expression:Expression" xmi:id="_CbUvtdEvEeySJ9acP6cdRQ" name="imapFolderName" content="imapFolderName" type="TYPE_PARAMETER" returnTypeFixed="true">
+                <referencedElements xmi:type="parameter:Parameter" xmi:id="_CbUvttEvEeySJ9acP6cdRQ" name="imapFolderName" typeClassname="java.lang.String" description="Inbos or sub folder"/>
               </expression>
             </parameters>
-            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_sPA1Sg0nEeuQpYQrcxAibA" key="emailBatchSize">
-              <expression xmi:type="expression:Expression" xmi:id="_sPA1Sw0nEeuQpYQrcxAibA" name="batchSize" content="batchSize" type="TYPE_PARAMETER" returnType="java.lang.Integer" returnTypeFixed="true">
-                <referencedElements xmi:type="parameter:Parameter" xmi:id="_XLUhgA-vEeuxG9TwArpZGA" name="batchSize" typeClassname="java.lang.Integer" description="number of unread mails to fetch"/>
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_CbUvt9EvEeySJ9acP6cdRQ" key="emailBatchSize">
+              <expression xmi:type="expression:Expression" xmi:id="_CbUvuNEvEeySJ9acP6cdRQ" name="batchSize" content="batchSize" type="TYPE_PARAMETER" returnType="java.lang.Integer" returnTypeFixed="true">
+                <referencedElements xmi:type="parameter:Parameter" xmi:id="_CbUvudEvEeySJ9acP6cdRQ" name="batchSize" typeClassname="java.lang.Integer" description="number of unread mails to fetch"/>
               </expression>
             </parameters>
           </configuration>
-          <outputs xmi:type="expression:Operation" xmi:id="_sPA1TA0nEeuQpYQrcxAibA">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_sPA1TQ0nEeuQpYQrcxAibA" name="emails" content="emails" type="TYPE_VARIABLE" returnType="java.util.List">
-              <referencedElements xmi:type="process:JavaObjectData" xmi:id="_NJWygA0sEeuQpYQrcxAibA" name="emails" multiple="true" dataType="_flJK0g0nEeuQpYQrcxAibA" className="java.util.List"/>
+          <outputs xmi:type="expression:Operation" xmi:id="_CbUvutEvEeySJ9acP6cdRQ">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_CbUvu9EvEeySJ9acP6cdRQ" name="emails" content="emails" type="TYPE_VARIABLE" returnType="java.util.List">
+              <referencedElements xmi:type="process:JavaObjectData" xmi:id="_CbUvvNEvEeySJ9acP6cdRQ" name="emails" multiple="true" dataType="_flJK0g0nEeuQpYQrcxAibA" className="java.util.List"/>
             </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_sPA1Tw0nEeuQpYQrcxAibA" name="mails" content="mails" type="CONNECTOR_OUTPUT_TYPE" returnType="java.util.List">
-              <referencedElements xmi:type="definition:Output" xmi:id="_sPA1UA0nEeuQpYQrcxAibA" name="mails" type="java.util.List"/>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_CbUvvdEvEeySJ9acP6cdRQ" name="mails" content="mails" type="CONNECTOR_OUTPUT_TYPE" returnType="java.util.List">
+              <referencedElements xmi:type="definition:Output" xmi:id="_CbUvvtEvEeySJ9acP6cdRQ" name="mails" type="java.util.List"/>
             </rightOperand>
-            <operator xmi:type="expression:Operator" xmi:id="_sPA1UQ0nEeuQpYQrcxAibA" type="ASSIGNMENT"/>
+            <operator xmi:type="expression:Operator" xmi:id="_CbUvv9EvEeySJ9acP6cdRQ" type="ASSIGNMENT"/>
           </outputs>
         </connectors>
         <loopCondition xmi:type="expression:Expression" xmi:id="_sPA1WA0nEeuQpYQrcxAibA" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
@@ -1046,23 +1046,23 @@
             <users xmi:type="actormapping:Users" xmi:id="_3IGQHb_kEeyzssQkb45JaQ"/>
           </actorMapping>
         </actorMappings>
-        <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_3IEa4b_kEeyzssQkb45JaQ" type="CONNECTOR" definitionId="bonita-connector-email-reader" definitionVersion="1.0" implementationId="bonita-connector-email-reader-impl" implementationVersion="1.5"/>
+        <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_uTdNANEvEeySJ9acP6cdRQ" type="CONNECTOR" definitionId="connector-email-reader" definitionVersion="1.0" implementationId="connector-email-reader-impl" implementationVersion="1.8"/>
         <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_3IEa47_kEeyzssQkb45JaQ" id="CONNECTOR">
-          <children xmi:type="configuration:FragmentContainer" xmi:id="_xR2GAL_yEeyGo-oMXyjQSA" id="bonita-connector-email-reader-impl-1.5">
-            <fragments xmi:type="configuration:Fragment" xmi:id="_xR2GAb_yEeyGo-oMXyjQSA" key="bonita-connector-email-reader-impl -- 1.5" value="bonita-connector-email-reader-1.5.jar" type="CONNECTOR"/>
-            <fragments xmi:type="configuration:Fragment" xmi:id="_xR2GAr_yEeyGo-oMXyjQSA" key="bonita-connector-email-reader-impl -- 1.5" value="activation-1.1.jar" type="CONNECTOR"/>
-            <fragments xmi:type="configuration:Fragment" xmi:id="_xR2GA7_yEeyGo-oMXyjQSA" key="bonita-connector-email-reader-impl -- 1.5" value="checker-qual-3.5.0.jar" type="CONNECTOR"/>
-            <fragments xmi:type="configuration:Fragment" xmi:id="_xR2GBL_yEeyGo-oMXyjQSA" key="bonita-connector-email-reader-impl -- 1.5" value="commons-email-1.5.jar" type="CONNECTOR"/>
-            <fragments xmi:type="configuration:Fragment" xmi:id="_xR2GBb_yEeyGo-oMXyjQSA" key="bonita-connector-email-reader-impl -- 1.5" value="error_prone_annotations-2.3.4.jar" type="CONNECTOR"/>
-            <fragments xmi:type="configuration:Fragment" xmi:id="_xR2GBr_yEeyGo-oMXyjQSA" key="bonita-connector-email-reader-impl -- 1.5" value="failureaccess-1.0.1.jar" type="CONNECTOR"/>
-            <fragments xmi:type="configuration:Fragment" xmi:id="_xR2GB7_yEeyGo-oMXyjQSA" key="bonita-connector-email-reader-impl -- 1.5" value="guava-30.1-jre.jar" type="CONNECTOR"/>
-            <fragments xmi:type="configuration:Fragment" xmi:id="_xR2GCL_yEeyGo-oMXyjQSA" key="bonita-connector-email-reader-impl -- 1.5" value="j2objc-annotations-1.3.jar" type="CONNECTOR"/>
-            <fragments xmi:type="configuration:Fragment" xmi:id="_xR2GCb_yEeyGo-oMXyjQSA" key="bonita-connector-email-reader-impl -- 1.5" value="jakarta.activation-1.2.2.jar" type="CONNECTOR"/>
-            <fragments xmi:type="configuration:Fragment" xmi:id="_xR2GCr_yEeyGo-oMXyjQSA" key="bonita-connector-email-reader-impl -- 1.5" value="jakarta.mail-1.6.3.jar" type="CONNECTOR"/>
-            <fragments xmi:type="configuration:Fragment" xmi:id="_xR2GC7_yEeyGo-oMXyjQSA" key="bonita-connector-email-reader-impl -- 1.5" value="javax.mail-1.5.6.jar" type="CONNECTOR"/>
-            <fragments xmi:type="configuration:Fragment" xmi:id="_xR2GDL_yEeyGo-oMXyjQSA" key="bonita-connector-email-reader-impl -- 1.5" value="jsr305-3.0.2.jar" type="CONNECTOR"/>
-            <fragments xmi:type="configuration:Fragment" xmi:id="_xR2GDb_yEeyGo-oMXyjQSA" key="bonita-connector-email-reader-impl -- 1.5" value="listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar" type="CONNECTOR"/>
-            <fragments xmi:type="configuration:Fragment" xmi:id="_xR2GDr_yEeyGo-oMXyjQSA" key="bonita-connector-email-reader-impl -- 1.5" value="owasp-java-html-sanitizer-20211018.2.jar" type="CONNECTOR"/>
+          <children xmi:type="configuration:FragmentContainer" xmi:id="_uTsdkNEvEeySJ9acP6cdRQ" id="connector-email-reader-impl-1.8">
+            <fragments xmi:type="configuration:Fragment" xmi:id="_uTu50NEvEeySJ9acP6cdRQ" key="connector-email-reader-impl -- 1.8" value="connector-email-reader-1.8.jar" type="CONNECTOR"/>
+            <fragments xmi:type="configuration:Fragment" xmi:id="_uTvg4NEvEeySJ9acP6cdRQ" key="connector-email-reader-impl -- 1.8" value="activation-1.1.jar" type="CONNECTOR"/>
+            <fragments xmi:type="configuration:Fragment" xmi:id="_uTwH8NEvEeySJ9acP6cdRQ" key="connector-email-reader-impl -- 1.8" value="checker-qual-3.5.0.jar" type="CONNECTOR"/>
+            <fragments xmi:type="configuration:Fragment" xmi:id="_uTwvANEvEeySJ9acP6cdRQ" key="connector-email-reader-impl -- 1.8" value="commons-email-1.5.jar" type="CONNECTOR"/>
+            <fragments xmi:type="configuration:Fragment" xmi:id="_uTxWENEvEeySJ9acP6cdRQ" key="connector-email-reader-impl -- 1.8" value="error_prone_annotations-2.3.4.jar" type="CONNECTOR"/>
+            <fragments xmi:type="configuration:Fragment" xmi:id="_uTx9INEvEeySJ9acP6cdRQ" key="connector-email-reader-impl -- 1.8" value="failureaccess-1.0.1.jar" type="CONNECTOR"/>
+            <fragments xmi:type="configuration:Fragment" xmi:id="_uTykMNEvEeySJ9acP6cdRQ" key="connector-email-reader-impl -- 1.8" value="guava-30.1-jre.jar" type="CONNECTOR"/>
+            <fragments xmi:type="configuration:Fragment" xmi:id="_uTzLQNEvEeySJ9acP6cdRQ" key="connector-email-reader-impl -- 1.8" value="j2objc-annotations-1.3.jar" type="CONNECTOR"/>
+            <fragments xmi:type="configuration:Fragment" xmi:id="_uT0ZYNEvEeySJ9acP6cdRQ" key="connector-email-reader-impl -- 1.8" value="jakarta.activation-1.2.2.jar" type="CONNECTOR"/>
+            <fragments xmi:type="configuration:Fragment" xmi:id="_uT1AcNEvEeySJ9acP6cdRQ" key="connector-email-reader-impl -- 1.8" value="jakarta.mail-1.6.7.jar" type="CONNECTOR"/>
+            <fragments xmi:type="configuration:Fragment" xmi:id="_uT1ngNEvEeySJ9acP6cdRQ" key="connector-email-reader-impl -- 1.8" value="javax.mail-1.5.6.jar" type="CONNECTOR"/>
+            <fragments xmi:type="configuration:Fragment" xmi:id="_uT2OkNEvEeySJ9acP6cdRQ" key="connector-email-reader-impl -- 1.8" value="jsr305-3.0.2.jar" type="CONNECTOR"/>
+            <fragments xmi:type="configuration:Fragment" xmi:id="_uT2OkdEvEeySJ9acP6cdRQ" key="connector-email-reader-impl -- 1.8" value="listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar" type="CONNECTOR"/>
+            <fragments xmi:type="configuration:Fragment" xmi:id="_uT3csNEvEeySJ9acP6cdRQ" key="connector-email-reader-impl -- 1.8" value="owasp-java-html-sanitizer-20211018.2.jar" type="CONNECTOR"/>
           </children>
         </processDependencies>
         <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_3IEa9r_kEeyzssQkb45JaQ" id="GROOVY_SCRIPT"/>
